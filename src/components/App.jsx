@@ -1,16 +1,36 @@
+import React from 'react';
+
+import { Component } from "react";
 import { ContactForm } from "./ContactForm/ContactForm";
-import { Filter } from "./Filter/Filter";
-import { ContactList } from "./ContactList/ContactList";
+// import { Filter } from "./Filter/Filter";
+//  import { ContactList } from "./ContactList/ContactList";
 
-export const App = () => {
-  return (
-     <div>
-       <h1>Phonebook</h1>
-     <ContactForm />
+export class App extends Component {
+  state = {
+    contacts: [],
+    name: ''
+  }
 
-      <h2>Contacts</h2>
-       <Filter />
-        <ContactList />  
-   </div>
+
+
+  render (){
+    return (
+      <div>
+        <h1>Phonebook</h1>
+    <ContactForm/>
+
+ 
+        {/* <ContactList contacts={this.state}/>    */}
+
+       
+    </div>
   ) 
+  }
+  //      <h1>Phonebook</h1>
+  //    <ContactForm />
+
+  //     <h2>Contacts</h2>
+  //      <Filter />
+
+
 };
