@@ -25,9 +25,9 @@ export class App extends Component {
     }));
   };
 
-  filterContact = searchContact => {
-    this.setState({
-      filter: searchContact,
+  handleFilter = e => {
+      this.setState({
+      filter: e.target.value,
     });
   };
 
@@ -48,8 +48,8 @@ export class App extends Component {
         <ContactForm onContacts={this.handleContacts} />
 
         <h2>Contacts</h2>
-        <Filter onFilter={this.filterContact} />
-
+        <Filter onFilter={this.handleFilter} />
+      
         <ContactList
           contacts={filterContact}
           deleteContact={this.deleteContact}

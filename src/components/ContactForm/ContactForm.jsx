@@ -68,6 +68,5 @@ export class ContactForm extends React.Component {
 }
 
 ContactForm.propTypes = {
-  handleForm: PropTypes.func,
   handleSubmit: PropTypes.func,
 };
